@@ -1,0 +1,111 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Hospital">
+        <!-- Defining all the types-->
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Patients" type="PatientsType" />
+                <xs:element name="Doctors" type="DoctorsType" />
+                <xs:element name="Nurses" type="NursesType" />
+                <xs:element name="MedicalStaff" type="MedicalStaffType" />
+                <xs:element name="Departments" type="DepartmentsType" />
+                <xs:element name="MedicalTests" type="MedicalTestType" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Patient Schema-->
+    <xs:complexType name="PatientsType">
+        <xs:sequence>
+            <xs:element name="PatientInfo" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="PatientID" type="xs:string" />
+                        <xs:element name="Name" type="xs:string" />
+                        <xs:element name="Age" type="xs:int" />
+                        <xs:element name="Gender" type="xs:string" />
+                        <xs:element name="ContactInfo" type="xs:string" />
+                        <xs:element name="MedicalRecords" type="MedicalRecordsType" />
+                        <xs:element name="Appointments" type="AppointmentsType" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- Medical Records Schema-->
+    <xs:complexType name="MedicalRecordsType">
+        <xs:sequence>
+            <xs:element name="RecordID" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Appointments Schema-->
+    <xs:complexType name="AppointmentsType">
+        <xs:sequence>
+            <xs:element name="AppointmentID" type="xs:string" />
+            <xs:element name="Date" type="xs:date" />
+            <xs:element name="AssignedDoctor" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Doctor's Schema-->
+    <xs:complexType name="DoctorsType">
+        <xs:sequence>
+            <xs:element name="DoctorID" type="xs:string" />
+            <xs:element name="Name" type="xs:string" />
+            <xs:element name="Speciality" type="xs:string" />
+            <xs:element name="PatientsAssigned" type="xs:string" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Nurses' Schema-->
+    <xs:complexType name="NursesType">
+        <xs:sequence>
+            <xs:element name="NurseID" type="xs:string" />
+            <xs:element name="Name" type="xs:string" />
+            <xs:element name="Department" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Medical Staff Schema-->
+    <xs:complexType name="MedicalStaffType">
+        <xs:sequence>
+            <xs:element name="Staff" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="StaffID" type="xs:string" />
+                        <xs:element name="Name" type="xs:string" />
+                        <xs:element name="Role" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- Department's Schema-->
+    <xs:complexType name="DepartmentsType">
+        <xs:sequence>
+            <xs:element name="Department" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="DepartmentID" type="xs:string" />
+                        <xs:element name="Name" type="xs:string" />
+                        <xs:element name="HeadDoctor" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Medical Tests Schema-->
+    <xs:complexType name="MedicalTestType">
+        <xs:sequence>
+            <xs:element name="Test" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="TestID" type="xs:string" />
+                        <xs:element name="TestName" type="xs:string" />
+                        <xs:element name="ConductedBy" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
