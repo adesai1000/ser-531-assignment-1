@@ -1,0 +1,9 @@
+Reflection:
+
+After having finished both the XML Schema and JSON Schema, I've found that while they differ syntactically, they use similar conpects. In XML Schema, you define elements with names and types, whereas JSON Schema uses types and properties.
+
+Both schemas start with a declaration specifying which schema model is being used, and they allow nesting of tags and properties. Despite of these similarities, the differences are mainly in syntax. XML Schema requires 'complexType' and 'sequence' declarations to structure properties, while JSON Schema simplifies this by directly specifying names, types, and properties itself.
+
+I find XML Schema's syntax more intuitive due to its clear nesting and declarations, making the schema easier to follow and gives higher code readability. In contrast, JSON Schema's constant nesting of types and properties can become hard to follow and reduce readability as complexity of the schema increases.
+
+However, for actual data instances, I prefer JSON over XML. JSON's format is the standard for data storage in databases and providing data via APIs, and it offers much readability. XML's tag-based structure feels looks cluttered, making JSON the more practical choice for most use cases.
