@@ -1,0 +1,97 @@
+<Hospital>
+    <Patients>
+        <PatientInfo>
+            <PatientID>P001</PatientID>
+            <Name>Ana de Armas
+            </Name>
+            <Age>36</Age>
+            <Gender>Female</Gender>
+            <ContactInfo>
+                123, Park St, New York City, NY
+            </ContactInfo>
+            <MedicalRecords>
+                <RecordID>R001</RecordID>
+            </MedicalRecords>
+            <Appointments>
+                <AppointmentID>
+                    A001
+                </AppointmentID>
+                <Date>2024-04-20</Date>
+                <AssignedDoctor>Dr. Ayush Desai</AssignedDoctor>
+            </Appointments>
+        </PatientInfo>
+        <PatientInfo>
+            <PatientID>P002</PatientID>
+            <Name>Christian Bale
+            </Name>
+            <Age>50</Age>
+            <Gender>Male</Gender>
+            <ContactInfo>
+                1007 Mountain Drive, Gotham
+            </ContactInfo>
+            <MedicalRecords>
+                <RecordID>R002</RecordID>
+            </MedicalRecords>
+            <Appointments>
+                <AppointmentID>
+                    R002
+                </AppointmentID>
+                <Date>2024-07-31</Date>
+                <AssignedDoctor>Dr. Vin Diesel</AssignedDoctor>
+            </Appointments>
+        </PatientInfo>
+    </Patients>
+    <Doctors>
+        <Doctor>
+            <DoctorID>D001</DoctorID>
+            <Name>Ayush Desai</Name>
+            <Specialty>Neurologist</Specialty>
+            <PatientsAssigned>P001</PatientsAssigned>
+        </Doctor>
+        <Doctor>
+            <DoctorID>D002</DoctorID>
+            <Name>Dr. Vin Diesel</Name>
+            <Specialty>Cardiologist</Specialty>
+            <PatientsAssigned>P002</PatientsAssigned>
+        </Doctor>
+    </Doctors>
+    <Nurses>
+        <Nurse>
+            <NurseID>N001</NurseID>
+            <Name>Sydney Sweeney</Name>
+            <Department>Neurologist</Department>
+        </Nurse>
+        <Nurse>
+            <NurseID>N002</NurseID>
+            <Name>Samuel L. Jackson</Name>
+            <Department>Cardiologist</Department>
+        </Nurse>
+    </Nurses>
+    <MedicalStaff>
+        <Staff>
+            <StaffID>S001</StaffID>
+            <Name>Jenna Ortega</Name>
+            <Role>Radiologist</Role>
+        </Staff>
+    </MedicalStaff>
+
+    <Departments>
+        <Department>
+            <DepartmentID>DEP001</DepartmentID>
+            <Name>Neurology</Name>
+            <HeadDoctor>Dr. Ayush Desai</HeadDoctor>
+        </Department>
+        <Department>
+            <DepartmentID>DEP002</DepartmentID>
+            <Name>Cardiology</Name>
+            <HeadDoctor>Dr. Vin Diesel</HeadDoctor>
+        </Department>
+    </Departments>
+    <MedicalTests>
+        <Test>
+          <TestID>T001</TestID>
+          <TestName>Cranium MRI</TestName>
+          <ConductedBy>Jenna Ortega</ConductedBy>
+        </Test>
+      </MedicalTests>
+</Hospital>
