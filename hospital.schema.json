@@ -1,0 +1,251 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Hospital Database Schema",
+    "type": "object",
+    "properties": {
+        "Hospital": {
+            "type": "object",
+            "properties": {
+                "Patients": {
+                    "type": "object",
+                    "properties": {
+                        "PatientInfo": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "PatientID": {
+                                        "type": "string"
+                                    },
+                                    "Name": {
+                                        "type": "string"
+                                    },
+                                    "Age": {
+                                        "type": "integer"
+                                    },
+                                    "Gender": {
+                                        "type": "string"
+                                    },
+                                    "ContactInfo": {
+                                        "type": "string"
+                                    },
+                                    "MedicalRecords": {
+                                        "type": "object",
+                                        "properties": {
+                                            "RecordID": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "RecordID"
+                                        ]
+                                    },
+                                    "Appointments": {
+                                        "type": "object",
+                                        "properties": {
+                                            "AppointmentID": {
+                                                "type": "string"
+                                            },
+                                            "Date": {
+                                                "type": "string",
+                                                "format": "date"
+                                            },
+                                            "AssignedDoctor": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "AppointmentID",
+                                            "Date",
+                                            "AssignedDoctor"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "PatientID",
+                                    "Name",
+                                    "Age",
+                                    "Gender",
+                                    "ContactInfo",
+                                    "MedicalRecords",
+                                    "Appointments"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "PatientInfo"
+                    ]
+                },
+                "Doctors": {
+                    "type": "object",
+                    "properties": {
+                        "Doctor": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "DoctorID": {
+                                        "type": "string"
+                                    },
+                                    "Name": {
+                                        "type": "string"
+                                    },
+                                    "Specialty": {
+                                        "type": "string"
+                                    },
+                                    "PatientsAssigned": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "required": [
+                                    "DoctorID",
+                                    "Name",
+                                    "Specialty",
+                                    "PatientsAssigned"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "Doctor"
+                    ]
+                },
+                "Nurses": {
+                    "type": "object",
+                    "properties": {
+                        "Nurse": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "NurseID": {
+                                        "type": "string"
+                                    },
+                                    "Name": {
+                                        "type": "string"
+                                    },
+                                    "Department": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "NurseID",
+                                    "Name",
+                                    "Department"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "Nurse"
+                    ]
+                },
+                "MedicalStaff": {
+                    "type": "object",
+                    "properties": {
+                        "Staff": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "StaffID": {
+                                        "type": "string"
+                                    },
+                                    "Name": {
+                                        "type": "string"
+                                    },
+                                    "Role": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "StaffID",
+                                    "Name",
+                                    "Role"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "Staff"
+                    ]
+                },
+                "Departments": {
+                    "type": "object",
+                    "properties": {
+                        "Department": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "DepartmentID": {
+                                        "type": "string"
+                                    },
+                                    "Name": {
+                                        "type": "string"
+                                    },
+                                    "HeadDoctor": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "DepartmentID",
+                                    "Name",
+                                    "HeadDoctor"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "Department"
+                    ]
+                },
+                "MedicalTests": {
+                    "type": "object",
+                    "properties": {
+                        "Test": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "TestID": {
+                                        "type": "string"
+                                    },
+                                    "TestName": {
+                                        "type": "string"
+                                    },
+                                    "ConductedBy": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "TestID",
+                                    "TestName",
+                                    "ConductedBy"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "Test"
+                    ]
+                }
+            },
+            "required": [
+                "Patients",
+                "Doctors",
+                "Nurses",
+                "MedicalStaff",
+                "Departments",
+                "MedicalTests"
+            ]
+        }
+    },
+    "required": [
+        "Hospital"
+    ]
+}
