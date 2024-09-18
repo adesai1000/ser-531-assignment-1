@@ -1,0 +1,104 @@
+{
+    "Hospital": {
+        "Patients": {
+            "PatientInfo": [
+                {
+                    "PatientID": "P001",
+                    "Name": "Ana de Armas",
+                    "Age": 36,
+                    "Gender": "Female",
+                    "ContactInfo": "123, Park St, New York City, NY",
+                    "MedicalRecords": {
+                        "RecordID": "R001"
+                    },
+                    "Appointments": {
+                        "AppointmentID": "A001",
+                        "Date": "2024-04-20",
+                        "AssignedDoctor": "Dr. Ayush Desai"
+                    }
+                },
+                {
+                    "PatientID": "P002",
+                    "Name": "Christian Bale",
+                    "Age": 50,
+                    "Gender": "Male",
+                    "ContactInfo": "1007 Mountain Drive, Gotham",
+                    "MedicalRecords": {
+                        "RecordID": "R002"
+                    },
+                    "Appointments": {
+                        "AppointmentID": "R002",
+                        "Date": "2024-07-31",
+                        "AssignedDoctor": "Dr. Vin Diesel"
+                    }
+                }
+            ]
+        },
+        "Doctors": {
+            "Doctor": [
+                {
+                    "DoctorID": "D001",
+                    "Name": "Ayush Desai",
+                    "Specialty": "Neurologist",
+                    "PatientsAssigned": [
+                        "P001"
+                    ]
+                },
+                {
+                    "DoctorID": "D002",
+                    "Name": "Dr. Vin Diesel",
+                    "Specialty": "Cardiologist",
+                    "PatientsAssigned": [
+                        "P002"
+                    ]
+                }
+            ]
+        },
+        "Nurses": {
+            "Nurse": [
+                {
+                    "NurseID": "N001",
+                    "Name": "Sydney Sweeney",
+                    "Department": "Neurologist"
+                },
+                {
+                    "NurseID": "N002",
+                    "Name": "Samuel L. Jackson",
+                    "Department": "Cardiologist"
+                }
+            ]
+        },
+        "MedicalStaff": {
+            "Staff": [
+                {
+                    "StaffID": "S001",
+                    "Name": "Jenna Ortega",
+                    "Role": "Radiologist"
+                }
+            ]
+        },
+        "Departments": {
+            "Department": [
+                {
+                    "DepartmentID": "DEP001",
+                    "Name": "Neurology",
+                    "HeadDoctor": "Dr. Ayush Desai"
+                },
+                {
+                    "DepartmentID": "DEP002",
+                    "Name": "Cardiology",
+                    "HeadDoctor": "Dr. Vin Diesel"
+                }
+            ]
+        },
+        "MedicalTests": {
+            "Test": [
+                {
+                    "TestID": "T001",
+                    "TestName": "Cranium MRI",
+                    "ConductedBy": "Jenna Ortega"
+                }
+            ]
+        }
+    }
+}
